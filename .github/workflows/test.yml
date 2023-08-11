@@ -1,0 +1,11 @@
+name: Deploy the application
+on: [workflow_dispatch]
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: checkout the repo
+        uses: actions/checkout@v3
+      - name: install dependancies
+        run: python run.py
+        shell: cmd
