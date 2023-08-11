@@ -20,5 +20,8 @@ jobs:
           update-setuptools: true
           # Boolean for wheel install/upgrade prior to the dependency installation (default='true')
           update-wheel: true
+      - name: run the website
+        run: python run.py
+        shell: cmd
           
         
