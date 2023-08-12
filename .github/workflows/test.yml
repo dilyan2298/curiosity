@@ -1,5 +1,5 @@
 name: Deploy the application
-on: [workflow_dispatch]
+on: [workflow_dispatch, push]
 jobs:
   
   deploy:
@@ -22,5 +22,6 @@ jobs:
           # Boolean for wheel install/upgrade prior to the dependency installation (default='true')
           update-wheel: true
       - name: run the website
+          run: python run.py
          
         
